@@ -7,7 +7,7 @@ import { Fira_Sans } from "next/font/google";
 import Image from "next/image";
 import image from "./suzana.png";
 import { FiArrowDownCircle } from "react-icons/fi";
-const gistesy = localFont({ src: "./assets/Gistesy.ttf" });
+const featherly = localFont({ src: "./assets/featherly.ttf" });
 const fira_sans = Fira_Sans({ weight: ["400", "700"], subsets: ["latin"] });
 // Define a functional component called "TemplateName" that takes an "event" object as a prop
 function TemplateName({ data: event }: { data: InvitationDetails }) {
@@ -33,10 +33,10 @@ function TemplateName({ data: event }: { data: InvitationDetails }) {
     <div className="relative h-full">
       <div
         className={`relative  flex h-full max-h-screen overflow-hidden  flex-col text-white items-center justify-center max-w-full`}>
-        <main className='absolute top-0 bottom-0 bg-black bg-gradient-to-b from-black to-gray-950  max-h-screen h-full w-full  px-4 py-8 sm:p-8 flex items-center justify-between flex-col'>
+        <main className='absolute top-0 bottom-0 bg-black max-h-screen h-full w-full  px-4 py-8 sm:p-8 flex items-center justify-between flex-col'>
           <div className='flex flex-col items-center justify-center space-y-2'>
             <h1
-              className={`${gistesy.className} text-center text-5xl sm:text-6xl animate-pulse shadow-inner `}
+              className={`${featherly.className} text-center text-5xl sm:text-6xl animate-pulse shadow-inner `}
               style={{
                 textShadow: "1px 1px 6px #fff",
               }}>
@@ -51,7 +51,7 @@ function TemplateName({ data: event }: { data: InvitationDetails }) {
               <p>
                 {monthDay}/{month.toString().padStart(2, "0")}
               </p>
-              <p>-</p>
+              <p></p>
               <p>{event?.time}</p>
             </div>
           </div>
@@ -73,16 +73,16 @@ function TemplateName({ data: event }: { data: InvitationDetails }) {
           <div className='flex flex-col items-center justify-center space-y-4 z-10'>
             <h1
               style={{
-                textShadow: "2px 1px pink",
+                textShadow: "2px 1px #fff",
               }}
-              className={`${gistesy.className} text-4xl sm:text-6xl text-center  bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent`}>
+              className={`${featherly.className} text-4xl sm:text-6xl text-center  bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent`}>
               {event?.title}
             </h1>
             <h1
               style={{
                 textShadow: "1px 1px 20px #fff",
               }}
-              className={`${gistesy.className} text-4xl sm:text-6xl text-center font-semibold animate-pulse`}>
+              className={`${featherly.className} text-4xl sm:text-6xl text-center font-semibold animate-pulse`}>
               {event?.subtitle}
             </h1>
           </div>
